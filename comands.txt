@@ -1,0 +1,28 @@
+Before optimization:
+1. g++ -O0 src/matrix.cpp -o matrix_O0
+2. /usr/bin/time --verbose ./matrix_O0 2> results_before/time.txt
+3. perf stat -e task-clock,context-switches,cpu-migrations,page-faults ./matrix_O0 > results_before/perf_stat.txt 2>&1
+4. perf record -F 99 -g -o /tmp/perf_before.data ./matrix_O0
+5. cp /tmp/perf_before.data results_before/perf.data
+6. perf report -i results_before/perf.data --stdio > results_before/perf_report.txt
+7. perf script -i results_before/perf.data > results_before/out.perf
+     ./FlameGraph/stackcollapse-perf.pl results_before/out.perf > results_before/out.folded
+     ./FlameGraph/flamegraph.pl results_before/out.folded > results_before/flamegraph_O0.svg
+    Item №3:
+1. sudo powerstat -d 0 1 480 > results_before/system_power.txt
+2. perf stat -e power/energy-pkg/,power/energy-ram/ ./matrix_O0
+
+
+After optimization:
+1. g++ -O3 -march=native src/matrix.cpp -o matrix_O3
+2. /usr/bin/time --verbose ./matrix_O3 2> results_after/time.txt
+3. perf stat -e task-clock,context-switches,cpu-migrations,page-faults ./matrix_O3 > results_after/perf_stat.txt 2>&1
+4. perf record -F 99 -g -o /tmp/perf_after.data ./matrix_O3
+5. cp /tmp/perf_after.data results_after/perf.data
+6. perf report -i results_after/perf.data --stdio > results_after/perf_report.txt
+7. perf script -i results_after/perf.data > results_after/out.perf
+        ./FlameGraph/stackcollapse-perf.pl results_after/out.perf > results_after/out.folded
+        ./FlameGraph/flamegraph.pl results_after/out.folded > results_after/flamegraph_O3.svg
+    Item №3:
+1. sudo powerstat -d 0 1 480 > results_after/system_power.txt
+2. perf stat -e power/energy-pkg/,power/energy-ram/ ./matrix_O3

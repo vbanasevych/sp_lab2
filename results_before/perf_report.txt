@@ -1,0 +1,290 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 11K of event 'task-clock:uppp'
+# Event count (approx.): 120838382630
+#
+# Children      Self  Command    Shared Object     Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+# ........  ........  .........  ................  ..........................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+   100.00%     0.00%  matrix_O0  matrix_O0         [.] _start
+            |
+            ---_start
+               __libc_start_main
+               0x7d4231e2a601
+               main
+               |          
+               |--93.57%--multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+               |          |          
+               |          |--7.36%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+               |          |          |          
+               |          |           --3.18%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |          |--6.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+               |          |          |          
+               |          |           --2.56%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          |          
+               |          |--3.21%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          |          
+               |          |--3.16%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |          |--3.03%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+               |          |          |          
+               |          |           --1.18%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |           --2.37%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+               |                     |          
+               |                      --1.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          
+               |--2.13%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+               |          
+               |--2.12%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+               |          
+               |--1.15%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+               |          
+                --1.01%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+
+   100.00%     0.00%  matrix_O0  libc.so.6         [.] __libc_start_main
+            |
+            ---__libc_start_main
+               0x7d4231e2a601
+               main
+               |          
+               |--93.57%--multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+               |          |          
+               |          |--7.36%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+               |          |          |          
+               |          |           --3.18%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |          |--6.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+               |          |          |          
+               |          |           --2.56%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          |          
+               |          |--3.21%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          |          
+               |          |--3.16%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |          |--3.03%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+               |          |          |          
+               |          |           --1.18%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |           --2.37%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+               |                     |          
+               |                      --1.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          
+               |--2.13%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+               |          
+               |--2.12%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+               |          
+               |--1.15%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+               |          
+                --1.01%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+
+   100.00%     0.00%  matrix_O0  libc.so.6         [.] 0x00007d4231e2a601
+            |
+            ---0x7d4231e2a601
+               main
+               |          
+               |--93.57%--multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+               |          |          
+               |          |--7.36%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+               |          |          |          
+               |          |           --3.18%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |          |--6.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+               |          |          |          
+               |          |           --2.56%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          |          
+               |          |--3.21%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          |          
+               |          |--3.16%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |          |--3.03%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+               |          |          |          
+               |          |           --1.18%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |           --2.37%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+               |                     |          
+               |                      --1.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          
+               |--2.13%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+               |          
+               |--2.12%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+               |          
+               |--1.15%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+               |          
+                --1.01%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+
+   100.00%     0.00%  matrix_O0  matrix_O0         [.] main
+            |
+            ---main
+               |          
+               |--93.57%--multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+               |          |          
+               |          |--7.36%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+               |          |          |          
+               |          |           --3.18%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |          |--6.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+               |          |          |          
+               |          |           --2.56%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          |          
+               |          |--3.21%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          |          
+               |          |--3.16%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |          |--3.03%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+               |          |          |          
+               |          |           --1.18%--std::vector<double, std::allocator<double> >::size() const
+               |          |          
+               |           --2.37%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+               |                     |          
+               |                      --1.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          
+               |--2.13%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+               |          
+               |--2.12%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+               |          
+               |--1.15%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+               |          
+                --1.01%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+
+    93.57%    68.40%  matrix_O0  matrix_O0         [.] multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+            |          
+            |--68.40%--_start
+            |          __libc_start_main
+            |          0x7d4231e2a601
+            |          main
+            |          multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+            |          
+             --25.17%--multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+                       |          
+                       |--7.36%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+                       |          |          
+                       |           --3.18%--std::vector<double, std::allocator<double> >::size() const
+                       |          
+                       |--6.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+                       |          |          
+                       |           --2.56%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+                       |          
+                       |--3.21%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+                       |          
+                       |--3.16%--std::vector<double, std::allocator<double> >::size() const
+                       |          
+                       |--3.03%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+                       |          |          
+                       |           --1.18%--std::vector<double, std::allocator<double> >::size() const
+                       |          
+                        --2.37%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+                                  |          
+                                   --1.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+
+     9.48%     6.29%  matrix_O0  matrix_O0         [.] std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+            |          
+            |--6.29%--_start
+            |          __libc_start_main
+            |          0x7d4231e2a601
+            |          main
+            |          |          
+            |          |--4.17%--multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+            |          |          std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+            |          |          
+            |           --2.12%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+            |          
+             --3.18%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+                       std::vector<double, std::allocator<double> >::size() const
+
+     8.18%     5.62%  matrix_O0  matrix_O0         [.] std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+            |          
+            |--5.62%--_start
+            |          __libc_start_main
+            |          0x7d4231e2a601
+            |          main
+            |          |          
+            |          |--3.49%--multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+            |          |          std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+            |          |          
+            |           --2.13%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+            |          
+             --2.56%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+                       std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+
+     7.52%     7.52%  matrix_O0  matrix_O0         [.] std::vector<double, std::allocator<double> >::size() const
+            |
+            ---_start
+               __libc_start_main
+               0x7d4231e2a601
+               main
+               multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+               |          
+               |--3.18%--std::vector<double, std::allocator<double> >::operator[](unsigned long) const
+               |          std::vector<double, std::allocator<double> >::size() const
+               |          
+               |--3.16%--std::vector<double, std::allocator<double> >::size() const
+               |          
+                --1.18%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+                          std::vector<double, std::allocator<double> >::size() const
+
+     6.81%     6.81%  matrix_O0  matrix_O0         [.] std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+            |
+            ---_start
+               __libc_start_main
+               0x7d4231e2a601
+               main
+               multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+               |          
+               |--3.21%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          
+               |--2.56%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long) const
+               |          std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+               |          
+                --1.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+                          std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+
+     4.05%     2.87%  matrix_O0  matrix_O0         [.] std::vector<double, std::allocator<double> >::operator[](unsigned long)
+            |          
+            |--2.87%--_start
+            |          __libc_start_main
+            |          0x7d4231e2a601
+            |          main
+            |          |          
+            |          |--1.86%--multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+            |          |          std::vector<double, std::allocator<double> >::operator[](unsigned long)
+            |          |          
+            |           --1.01%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+            |          
+             --1.18%--std::vector<double, std::allocator<double> >::operator[](unsigned long)
+                       std::vector<double, std::allocator<double> >::size() const
+
+     3.52%     2.47%  matrix_O0  matrix_O0         [.] std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+            |          
+            |--2.47%--_start
+            |          __libc_start_main
+            |          0x7d4231e2a601
+            |          main
+            |          |          
+            |          |--1.32%--multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+            |          |          std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+            |          |          
+            |           --1.15%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+            |          
+             --1.04%--std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::operator[](unsigned long)
+                       std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::size() const
+
+     0.01%     0.01%  matrix_O0  libc.so.6         [.] 0x0000000000197d07
+     0.01%     0.00%  matrix_O0  matrix_O0         [.] std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::vector(unsigned long, std::vector<double, std::allocator<double> > const&, std::allocator<std::vector<double, std::allocator<double> > > const&)
+     0.01%     0.00%  matrix_O0  matrix_O0         [.] std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >::_M_fill_initialize(unsigned long, std::vector<double, std::allocator<double> > const&)
+     0.01%     0.00%  matrix_O0  matrix_O0         [.] std::vector<double, std::allocator<double> >* std::__uninitialized_fill_n_a<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&, std::allocator<std::vector<double, std::allocator<double> > >&)
+     0.01%     0.00%  matrix_O0  matrix_O0         [.] std::vector<double, std::allocator<double> >* std::uninitialized_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&)
+     0.01%     0.00%  matrix_O0  matrix_O0         [.] std::vector<double, std::allocator<double> >* std::__do_uninit_fill_n<std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > >(std::vector<double, std::allocator<double> >*, unsigned long, std::vector<double, std::allocator<double> > const&)
+     0.01%     0.00%  matrix_O0  matrix_O0         [.] void std::_Construct<std::vector<double, std::allocator<double> >, std::vector<double, std::allocator<double> > const&>(std::vector<double, std::allocator<double> >*, std::vector<double, std::allocator<double> > const&)
+     0.01%     0.00%  matrix_O0  matrix_O0         [.] std::vector<double, std::allocator<double> >::vector(std::vector<double, std::allocator<double> > const&)
+     0.01%     0.00%  matrix_O0  matrix_O0         [.] double* std::__uninitialized_copy_a<__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > >, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > >, double*, double>(__gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > >, __gnu_cxx::__normal_iterator<double const*, std::vector<double, std::allocator<double> > >, double*, std::allocator<double>&)
+     0.01%     0.00%  matrix_O0  libc.so.6         [.] 0x00007d4231f97d07
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

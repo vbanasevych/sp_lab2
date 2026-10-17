@@ -1,0 +1,35 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 1K of event 'task-clock:uppp'
+# Event count (approx.): 13161616030
+#
+# Children      Self  Command    Shared Object     Symbol                                                                                                                                                                                                                                                                                                                                                                                                              
+# ........  ........  .........  ................  ....................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+    99.92%    99.92%  matrix_O3  matrix_O3         [.] multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+            |
+            ---0x40b5f90000000000
+               0x58c2cea5c7a0
+               multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+
+    99.92%     0.00%  matrix_O3  [unknown]         [.] 0x40b5f90000000000
+            |
+            ---0x40b5f90000000000
+               0x58c2cea5c7a0
+               multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+
+    99.92%     0.00%  matrix_O3  [unknown]         [.] 0x000058c2cea5c7a0
+            |
+            ---0x58c2cea5c7a0
+               multiplyMatrices(std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > > const&, std::vector<std::vector<double, std::allocator<double> >, std::allocator<std::vector<double, std::allocator<double> > > >&)
+
+     0.08%     0.08%  matrix_O3  libc.so.6         [.] 0x0000000000197d17
+     0.08%     0.00%  matrix_O3  libc.so.6         [.] 0x00007c9949d97d17
+
+
+#
+# (Cannot load tips.txt file, please install perf!)
+#

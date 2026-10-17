@@ -1,0 +1,16 @@
+Starting matrix multiplication 
+Done. Verification: 5625
+
+ Performance counter stats for './matrix_O3':
+
+          11915.86 msec task-clock:u                                                          
+                 0      context-switches:u                                                    
+                 0      cpu-migrations:u                                                      
+             13370      page-faults:u                                                         
+
+      11.932342796 seconds time elapsed
+
+      11.813401000 seconds user
+       0.103977000 seconds sys
+
+
